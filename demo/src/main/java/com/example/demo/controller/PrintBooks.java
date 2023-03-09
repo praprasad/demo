@@ -13,8 +13,8 @@ public class PrintBooks {
 
 	public List<List<String>> printBooksDetails() throws IOException{
 		
-		List<List<String>> ls1 =csv.parsingCSV();
-		ls1.stream().forEach(s->System.out.println(s));					// Use of stream to print the list in the console
-		return ls1;
+		List<List<String>> bookDetails =csv.parsingCSV();
+		bookDetails.stream().forEach(s->System.out.println(s));					// Use of stream to print the list in the console
+		return bookDetails;
 	}
 }
