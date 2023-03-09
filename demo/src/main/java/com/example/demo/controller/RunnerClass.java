@@ -13,7 +13,7 @@ public class RunnerClass {
 	@Autowired
 	private PrintBooks booksDetails;
 	
-	@GetMapping("/prabhakar")													// publishing values on localhost
+	@GetMapping("/BookDetails")													// publishing values on localhost
 	public List<List<String>> publishValue() throws IOException {
 		
 		List<List<String>> publishvalue = booksDetails.printBooksDetails();		// Getting values from print Book class
