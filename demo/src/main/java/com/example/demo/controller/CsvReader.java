@@ -15,7 +15,7 @@ public class CsvReader {
 	public List<List<String>> parsingCSV() throws IOException{
 		
 		List<List<String>> records = new ArrayList<>();
-		try (BufferedReader br = new BufferedReader(new FileReader("/demo/src/main/resources/booksdetails.csv"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\PrPrasad\\Downloads\\demo\\demo\\src\\main\\resources\\booksdetails.csv"))) {
 		    String line;
 		    while ((line = br.readLine()) != null) {
 		        String[] values = line.split(",");
