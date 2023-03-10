@@ -2,6 +2,11 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * Book class is used define getter and setter for all the required fields from the book details file
+ * @author PrPrasad
+ *
+ */
 @Component
 public class Book {
 	

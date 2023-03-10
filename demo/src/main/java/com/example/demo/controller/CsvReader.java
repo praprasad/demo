@@ -12,6 +12,12 @@ import org.springframework.stereotype.Component;
 @Component 
 public class CsvReader {
 
+	/**
+	 * Method will parse the CSV file and read the into List of Lists of String and 
+	 * return the same for printer component
+	 * @return
+	 * @throws IOException
+	 */
 	public List<List<String>> parsingCSV() throws IOException{
 		
 		List<List<String>> records = new ArrayList<>();
