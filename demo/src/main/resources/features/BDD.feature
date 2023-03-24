@@ -10,7 +10,8 @@ Feature: Verify the Book details from Local host
     Then response status code is 200
     And returned string should be "Prabhakar"
     
- Scenario: Check response code for negative Scenario
-    When the user calls endpoint "/Book"
-    Then response status code is 404
+ Scenario: Check response code and Price
+    When the user calls endpoint "/BookDetails"
+    Then response status code is 200
+    And returned string should be "$1"
     
