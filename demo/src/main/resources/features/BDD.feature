@@ -15,3 +15,7 @@ Feature: Verify the Book details from Local host
     Then response status code is 200
     And returned string should be "$1"
     
+ Scenario: Check response code and Price
+    When the user calls endpoint "/BookDetails"
+    Then returned string should be "Lord of the Ring"
+    
