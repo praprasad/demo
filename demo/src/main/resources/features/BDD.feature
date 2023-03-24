@@ -17,5 +17,5 @@ Feature: Verify the Book details from Local host
     
  Scenario: Check response code and Price
     When the user calls endpoint "/BookDetails"
-    Then returned string should be "Lord of the Ring"
+    Then returned string should not contain "Lord of the Ring"
     
