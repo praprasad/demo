@@ -35,7 +35,6 @@ public class CucumberMySteps {
 	@SuppressWarnings("deprecation")
 	@Then("response status code is {int}")
 	public void thenStatusCodee(int expected) {
-		System.out.println("cccccc" + lastResponse.getStatusCode());
 		Assertions.assertNotNull(lastResponse);
 		Assertions.assertNotNull(lastResponse.getStatusCode());
 		assertThat("status code is" + expected, lastResponse.getStatusCodeValue() == expected);
