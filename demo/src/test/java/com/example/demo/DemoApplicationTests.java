@@ -70,4 +70,9 @@ class DemoApplicationTests {
 	public void inValidateResponceCode() throws Exception {
 		this.mockMvc.perform(get("/Book")).andDo(print()).andExpect(status().is4xxClientError());
 	}
+	
+	@Test
+	public void getBookDetailsNegative() throws Exception { assertThat(this.restTemplate.getForObject("http://localhost:7070/BookDetails",
+						String.class)).doesNotContain("Lords of Ring");
+	}
 }
