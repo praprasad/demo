@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
+import org.springframework.util.ObjectUtils;
+
+import io.micrometer.common.util.StringUtils;
 
 @Component 
 public class CsvReader {
@@ -18,15 +21,27 @@ public class CsvReader {
 	 * @return
 	 * @throws IOException
 	 */
-	public List<List<String>> parsingCSV() throws IOException{
+	
+	
+	
+	public List<Book> parsingCSV() throws IOException{
 		
-		List<List<String>> records = new ArrayList<>();
+		List<Book> records = new ArrayList<>();
+		
 		String path = System.getProperty("user.dir") + "/src/main/resources/booksdetails.csv";
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 		    String line;
 		    while ((line = br.readLine()) != null) {
+		    	
+		    	if(StringUtils.isNotEmpty(line)) {
 		        String[] values = line.split(",");
-		        records.add(Arrays.asList(values));
+		        Book bksObj = new Book();
+		        bksObj.setTitle(values[0]);
+		        bksObj.setAuthor(values[1]);
+		        bksObj.setPrice(values[2]);
+		        records.add(bksObj);
+		        //records.add(Arrays.asList(values));
+		    	}
 		    }
 		}
 		return records;

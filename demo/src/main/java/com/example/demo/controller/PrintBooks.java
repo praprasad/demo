@@ -17,9 +17,9 @@ public class PrintBooks {
 	 * @return
 	 * @throws IOException
 	 */
-	public List<List<String>> printBooksDetails() throws IOException{
+	public List<Book> printBooksDetails() throws IOException{
 		
-		List<List<String>> bookDetails =csv.parsingCSV();
+		List<Book> bookDetails =csv.parsingCSV();
 		bookDetails.stream().forEach(s->System.out.println(s));					
 		return bookDetails;
 	}

@@ -14,9 +14,9 @@ public class RunnerClass {
 	private PrintBooks booksDetails;
 	
 	@GetMapping("/BookDetails")													// publishing values on localhost
-	public List<List<String>> publishValue() throws IOException {
+	public List<Book> publishValue() throws IOException {
 		
-		List<List<String>> publishvalue = booksDetails.printBooksDetails();		// Getting values from print Book class
+		List<Book> publishvalue = booksDetails.printBooksDetails();		// Getting values from print Book class
 		return publishvalue;
 	}
 	
